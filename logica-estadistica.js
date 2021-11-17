@@ -4,20 +4,22 @@ const z = 1.64;
 var n1, n2, e1, e2, p1, p2, resultMenor, resultMayor;
 
 obtenerDatos=()=>{
-    n1 = Number(document.getElementById('muestra1'));
-    n2 = Number(document.getElementById('muestra2'));
-    e1 = document.getElementById('exitos1');
-    e2 = document.getElementById('exitos2');
+    n1 = Number(document.getElementById('muestra1').value);
+    n2 = Number(document.getElementById('muestra2').value);
+    e1 = document.getElementById('exitos1').value;
+    e2 = document.getElementById('exitos2').value;
 
-
+    
 
     p1= Number(e1)/n1;
     p2= Number(e2)/n2;
+    
 
 };
 
 calcularDatos=()=>{
     obtenerDatos();
+  
     resultMenor=(((p1>p2)?p1:p2)-((p1<p2)?p1:p2))-z*(Math.sqrt((p1*(p1-1)/n1)+(p2*(p2-1)/n2)));
     resultMayor=(((p1>p2)?p1:p2)-((p1<p2)?p1:p2))+z*(Math.sqrt((p1*(p1-1)/n1)+(p2*(p2-1)/n2)));
 
