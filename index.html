@@ -89,7 +89,7 @@
                 </div>
             </div>
             <button type="submit" style=" text-align: center; margin-left: 50%; transform: translateX(-50%);"
-                class="btn btn-success">Procesar informacion</button>
+                class="btn btn-success" onclick="calcularDatos()">Procesar informacion</button>
         </form>
     </div>
     <div class=" mt-5 " id="contenedorResultados">
@@ -118,6 +118,10 @@
                 <tr>
                     <th class="text-center" scope="row">Limite Superior</th>
                     <td id="limiteSuperior" class="text-center " colspan="2">- - - - -</td>
+                </tr>
+                <tr>
+                    <th class="text-center" scope="row">Interpretación</th>
+                    <td id="respuesta" class="text-center " colspan="2">- - - - -</td>
                 </tr>
             </tbody>
         </table>
