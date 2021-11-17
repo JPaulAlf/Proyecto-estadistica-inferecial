@@ -18,12 +18,38 @@
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
 
+    <style>
+        #contenedorInputs {
+            margin-left: 20%;
+            margin-right: 20%;
+            background-color: bisque;
+            border-radius: 5px;
+            padding: 20px;
+            border:2px black;
+        }
+        #contenedorResultados {
+            margin-left: 20%;
+            margin-right: 20%;
+            background-color: azure;
+            border-radius: 5px;
+            padding: 20px;
+            border:2px black;
+        }
+        #fondoTabla{
+            background-color: cornsilk;
+        }
+        
+    </style>
 </head>
 
 <body>
 
 
-    <div class="ml-5 mr-5 mt-5 mb-5">
+    <div class="mt-5 mb-5" id="contenedorInputs">
+        <h5>
+            Favor ingresar los siguientes datos
+        </h5>
+        <br>
         <form>
             <div class="row">
                 <div class="col">
@@ -43,16 +69,39 @@
                     <br>
                 </div>
             </div>
-            <button type="submit" class="btn btn-primary">Procesar informacion</button>
+            <button type="submit" style=" text-align: center; margin-left: 50%; transform: translateX(-50%);"
+                class="btn btn-primary">Procesar informacion</button>
         </form>
     </div>
-    <div>
-        <p id="resultados">
-
-        </p>
+    <div class=" mt-5 "  id="contenedorResultados">
+        <h5>
+            Resultados de los datos suministrados:
+        </h5>
+        <table class="table table-bordered table-striped" id="fondoTabla">
+            <thead>
+                <tr>
+                    <th scope="col" class="text-center"></th>
+                    <th scope="col" class="text-center">Hombres</th>
+                    <th scope="col" class="text-center">Mujeres</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row" class="text-center">Porcentajes</th>
+                    <td id="porcentajeHombre" class="text-center ">- - - - -</td>
+                    <td id="porcentajeMujer" class="text-center">- - - - -</td>
+                </tr>
+                <tr>
+                    <th class="text-center" scope="row">Limite Inferior</th>
+                    <td id="limiteInferior" class="text-center " colspan="2">- - - - -</td>
+                </tr>
+                <tr>
+                    <th class="text-center" scope="row">Limite Superior</th>
+                    <td id="limiteSuperior" class="text-center " colspan="2">- - - - -</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
-
-
 </body>
 
 </html>
