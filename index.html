@@ -10,13 +10,13 @@
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
-    </script>
+        </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
-    </script>
+        </script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
-    </script>
+        </script>
 
     <style>
         body {
@@ -28,9 +28,11 @@
             /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
         }
-        .nota{
+
+        .nota {
             color: #fff
         }
+
         #contenedorInputs {
             margin-left: 20%;
             margin-right: 20%;
@@ -72,19 +74,19 @@
         </h5>
         <br>
         <form>
+
             <div class="row">
-                <div class="col">
-                    <label for="">Cantidad de hombres</label>
-                    <input id="muestra1" type="number" class="form-control" placeholder="- - - -">
+                <div class="col col-12">
+                    <label for="">Cantidad total de la muestra</label>
+                    <input id="muestra" type="number" class="form-control" placeholder="- - - -">
                     <br>
+                </div>
+                <div class="col">
                     <label for="">Hombres con vehículos</label>
                     <input id="exitos1" type="number" class="form-control" placeholder="- - - -">
                     <br>
                 </div>
                 <div class="col">
-                    <label for="">Cantidad de mujeres</label>
-                    <input id="muestra2" type="number" class="form-control" placeholder="- - - -">
-                    <br>
                     <label for="">Mujeres con vehículos</label>
                     <input id="exitos2" type="number" class="form-control" placeholder="- - - -">
                     <br>
@@ -130,5 +132,5 @@
     </div>
     <script src="logica-estadistica.js"></script>
 </body>
-   
+
 </html>

@@ -4,8 +4,8 @@ const z = 1.64;
 var n1, n2, e1, e2, p1, p2, resultMenor, resultMayor;
 
 obtenerDatos = () => {
-    n1 = Number(document.getElementById('muestra1').value);
-    n2 = Number(document.getElementById('muestra2').value);
+    n1 = Number(document.getElementById('muestra').value);
+    n2 = Number(document.getElementById('muestra').value);
     e1 = document.getElementById('exitos1').value;
     e2 = document.getElementById('exitos2').value;
 
@@ -37,8 +37,8 @@ calcularDatos = () => {
 
         resultMayor = resultMayor.toFixed(4);
         resultMenor = resultMenor.toFixed(4);
-        p1 = p1.toFixed(4) * 100;
-        p2 = p2.toFixed(4) * 100;
+        p1 = p1.toFixed(3) * 100;
+        p2 = p2.toFixed(3) * 100;
 
         document.getElementById('porcentajeHombre').innerHTML = p1+"%";
         document.getElementById('porcentajeMujer').innerHTML = p2+"%";
