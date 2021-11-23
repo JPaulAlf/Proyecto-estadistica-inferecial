@@ -9,11 +9,13 @@ obtenerDatos = () => {
     e1 = document.getElementById('exitos1').value;
     e2 = document.getElementById('exitos2').value;
 
+
     if(isNaN(n1) || n1==null || n1 =='') return true;
     if(isNaN(n2) || n2==null || n2 =='') return true;
     if(isNaN(e1) || e1==null || e1 =='') return true;
     if(isNaN(e2) || e2==null || e2 =='') return true;
-
+    if(n1<e1) return true;
+    if(n2<e2) return true;
     p1 = Number(e1) / n1;
     p2 = Number(e2) / n2;
 
@@ -22,7 +24,7 @@ obtenerDatos = () => {
 
 calcularDatos = () => {
    if(obtenerDatos()){
-       alert('Faltan datos, por favor revisar');
+       alert('Datos erroneos no pueden haber totales inferiores al éxito ni espacios vacios, por favor revisar');
        return;
    }
     var audio = new Audio('click.mp3');
