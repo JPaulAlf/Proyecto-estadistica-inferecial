@@ -24,7 +24,7 @@ obtenerDatos = () => {
 
 calcularDatos = () => {
    if(obtenerDatos()){
-       alert('Datos erroneos no pueden haber totales inferiores al éxito ni espacios vacios, por favor revisar');
+       alert('No pueden haber totales inferiores al éxito ni espacios vacios, por favor revisar');
        return;
    }
     var audio = new Audio('click.mp3');
