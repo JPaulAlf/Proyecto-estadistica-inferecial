@@ -40,8 +40,8 @@ calcularDatos = () => {
         p1 = p1.toFixed(4) * 100;
         p2 = p2.toFixed(4) * 100;
 
-        document.getElementById('porcentajeHombre').innerHTML = p1;
-        document.getElementById('porcentajeMujer').innerHTML = p2;
+        document.getElementById('porcentajeHombre').innerHTML = p1+"%";
+        document.getElementById('porcentajeMujer').innerHTML = p2+"%";
         document.getElementById('limiteInferior').innerHTML = resultMenor;
         document.getElementById('limiteSuperior').innerHTML = resultMayor;
         document.getElementById('respuesta').innerHTML = 'El porcentaje para los hombres es ' + p1 + '% y para las mujeres es ' + p2 + '%. Con respecto a la estimación de la proporción con un intervalo de confianza del 90% tenemos que distan entre ' + resultMenor + ' a ' + resultMayor;
