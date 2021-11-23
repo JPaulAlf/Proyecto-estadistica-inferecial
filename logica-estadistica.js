@@ -9,15 +9,25 @@ obtenerDatos = () => {
     e1 = document.getElementById('exitos1').value;
     e2 = document.getElementById('exitos2').value;
 
+    if(isNaN(n1) || n1==null || n1 =='') return true;
+    if(isNaN(n2) || n2==null || n2 =='') return true;
+    if(isNaN(e1) || e1==null || e1 =='') return true;
+    if(isNaN(e2) || e2==null || e2 =='') return true;
+
     p1 = Number(e1) / n1;
     p2 = Number(e2) / n2;
 
+    return false;
 };
 
 calcularDatos = () => {
-    obtenerDatos();
+   if(obtenerDatos()){
+       alert('Faltan datos, por favor revisar');
+       return;
+   }
     var audio = new Audio('click.mp3');
     audio.play();
+
 
     if (n1 != '' && n2 != '' && e1 != '' && e2 != '') {
         resultMenor = (((p1 > p2) ? p1 : p2) - ((p1 < p2) ? p1 : p2)) - z * (Math.sqrt((p1 * (1 - p1) / n1) + (p2 * (1 - p2) / n2)));
