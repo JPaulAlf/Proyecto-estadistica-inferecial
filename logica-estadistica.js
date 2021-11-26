@@ -10,12 +10,12 @@ obtenerDatos = () => {
     e2 = document.getElementById('exitos2').value;
 
 
-    if(isNaN(n1) || n1==null || n1 =='') return true;
-    if(isNaN(n2) || n2==null || n2 =='') return true;
-    if(isNaN(e1) || e1==null || e1 =='') return true;
-    if(isNaN(e2) || e2==null || e2 =='') return true;
-    if(n1<e1) return true;
-    if(n2<e2) return true;
+    if (isNaN(n1) || n1 == null || n1 == '') return true;
+    if (isNaN(n2) || n2 == null || n2 == '') return true;
+    if (isNaN(e1) || e1 == null || e1 == '') return true;
+    if (isNaN(e2) || e2 == null || e2 == '') return true;
+    if (n1 < e1) return true;
+    if (n2 < e2) return true;
     p1 = Number(e1) / n1;
     p2 = Number(e2) / n2;
 
@@ -23,10 +23,10 @@ obtenerDatos = () => {
 };
 
 calcularDatos = () => {
-   if(obtenerDatos()){
-       alert('No pueden haber totales inferiores al éxito ni espacios vacios, por favor revisar');
-       return;
-   }
+    if (obtenerDatos()) {
+        alert('No puede haber una muestra inferior al numero de éxitos ni espacios vacios, por favor revisar');
+        return;
+    }
     var audio = new Audio('click.mp3');
     audio.play();
 
@@ -40,8 +40,8 @@ calcularDatos = () => {
         p1 = p1.toFixed(3) * 100;
         p2 = p2.toFixed(3) * 100;
 
-        document.getElementById('porcentajeHombre').innerHTML = p1+"%";
-        document.getElementById('porcentajeMujer').innerHTML = p2+"%";
+        document.getElementById('porcentajeHombre').innerHTML = p1 + "%";
+        document.getElementById('porcentajeMujer').innerHTML = p2 + "%";
         document.getElementById('limiteInferior').innerHTML = resultMenor;
         document.getElementById('limiteSuperior').innerHTML = resultMayor;
         document.getElementById('respuesta').innerHTML = 'El porcentaje para los hombres es ' + p1 + '% y para las mujeres es ' + p2 + '%. Con respecto a la estimación de la proporción con un intervalo de confianza del 90% tenemos que distan entre ' + resultMenor + ' a ' + resultMayor;
